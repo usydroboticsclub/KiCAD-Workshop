@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiCad Workshop — Building the Schematic</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">A Beginners Guide to KiCad</a>
+      <div class="top-actions">
+        <a class="button" href="../resources.html">Additional Resources</a>
+        <a class="button credits-link" href="../credits.html">Credits</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    
+<aside class="sidebar">
+  <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
+  <h3>Lessons</h3>
+  <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
+<a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
+<a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
+<a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
+<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
+<a class="nav-link" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
+<a class="nav-link" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
+<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+</aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="lesson-number">04</div>
+        <div class="eyebrow">Schematic</div>
+        <h1>Building the Schematic</h1>
+        <p class="lead">Using the Schematic Editor to place circuit symbols and begin drawing your design in KiCad.</p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">Schematic Design</div>
+        <h2>From circuit idea to schematic</h2>
+        <p>Open the Schematic Editor, add symbols for the components in your circuit, and connect their pins with wires. This schematic records the electrical connections that will later be transferred to the PCB layout.</p>
+      </section>
+
+<section class="embed-card">
+  <div class="eyebrow">Video Walkthrough</div>
+  <h2>Build the Circuit</h2>
+  <details class="details video-disclosure">
+    <summary>Making the LED Array</summary>
+    <div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/yzHGEjQmhGg" title="Video walkthrough: making the LED array" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </details>
+  <details class="details video-disclosure">
+    <summary>Making the 555 Timer Circuit</summary>
+    <div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/0akR5P5ej7g" title="Video walkthrough: making the 555 timer circuit" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </details>
+</section>
+
+<details class="details card collapsible-card">
+  <summary>
+    <span class="eyebrow">Written Guide</span>
+    <span class="collapsible-title">Step-by-Step: Build the Schematic</span>
+  </summary>
+  <div class="collapsible-content">
+<section class="step-card">
+  <div class="step-index">01</div>
+  <div>
+    <h2>Open Schematic Editor</h2>
+    <p>From the project manager, launch the Schematic Editor.</p>
+    <div class="media-placeholder">Add screenshot: Schematic Editor button</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">02</div>
+  <div>
+    <h2>Place circuit symbols</h2>
+    <p>Hover over the canvas and press <kbd>A</kbd> to open the Symbol Chooser. Search for a component from your circuit, select the matching symbol, and place it on the sheet.</p>
+    <div class="media-placeholder">Add screenshot: Symbol Chooser window</div>
+    <div class="checkpoint"><strong>✓ Checkpoint:</strong> The symbols you need are placed on the schematic sheet.</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">03</div>
+  <div>
+    <h2>Connect the circuit</h2>
+    <p>Use the wire tool to connect symbol pins according to the circuit you explored in the previous lesson. Keep connections clear and save the project as you work.</p>
+    <div class="checkpoint"><strong>✓ Checkpoint:</strong> Your schematic shows the circuit's components and their intended connections.</div>
+  </div>
+</section>
+
+  </div>
+</details>
+<section class="checkpoint">
+  <strong>Lesson checkpoint:</strong> Your schematic includes the circuit symbols and the connections between them.
+</section>
+
+      <nav class="lesson-footer">
+        <a href="03-create-project.html">← Previous</a>
+        <a href="../index.html">Workshop Home</a>
+        <a href="05-symbols.html">Next →</a>
+      </nav>
+    </main>
+  </div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>A Beginners Guide to KiCad · University of Sydney Robotics Club</span>
+    <nav class="footer-socials" aria-label="USRC social links">
+      <a href="https://www.instagram.com/usydrobotics/" target="_blank" rel="noopener noreferrer" aria-label="USRC on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="https://www.facebook.com/usydroboticsclub" target="_blank" rel="noopener noreferrer" aria-label="USRC on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8h3.7Z"/></svg></a>
+      <a href="https://www.linkedin.com/company/usyd-robotics-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="USRC on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M5.2 8.4H2V21h3.2V8.4ZM3.6 2.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM22 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2.1V8.4h-3.1V21h3.2v-6.2c0-1.6.3-3.2 2.4-3.2 2.1 0 2.1 1.9 2.1 3.3V21h3.2v-7.2Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

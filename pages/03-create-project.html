@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiCad Workshop — Creating a Project</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">A Beginners Guide to KiCad</a>
+      <div class="top-actions">
+        <a class="button" href="../resources.html">Additional Resources</a>
+        <a class="button credits-link" href="../credits.html">Credits</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    
+<aside class="sidebar">
+  <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
+  <h3>Lessons</h3>
+  <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link active" href="03-create-project.html">03 &nbsp; Creating a Project</a>
+<a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
+<a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
+<a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
+<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
+<a class="nav-link" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
+<a class="nav-link" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
+<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+</aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="lesson-number">03</div>
+        <div class="eyebrow">Project Setup</div>
+        <h1>Creating a Project</h1>
+        <p class="lead">An overview of KiCad's features, plus getting started with your project.</p>
+      </section>
+
+<section class="card">
+  <div class="eyebrow">KiCad Overview</div>
+  <h2>One project, several design tools</h2>
+  <img class="project-overview-image" src="../assets/images/Page%203/KiCAD-Homepage-Overview.png" alt="KiCad project manager showing the Schematic Editor, Symbol Editor, PCB Editor, and Footprint Editor">
+  <p>KiCad projects bring together several different files made with different tools. The main tools you'll use in this workshop, and most often when designing a PCB, are the Schematic Editor, Footprint Editor, Symbol Editor, and PCB Editor .</p>
+  <details class="details editor-details">
+    <summary>What is a Schematic?</summary>
+    <div>
+      <div class="media-placeholder">Add schematic image here</div>
+      <p>A <strong>schematic</strong> is a diagram that shows how the electrical parts of a circuit are connected.</p>
+      <p>In KiCad, the <strong>Schematic Editor</strong> is where you place components, connect their pins with wires, add labels, power symbols, and organise everything into a circuit that is easy to understand.</p>
+      <p>The schematic describes the <strong>electrical connections</strong> in your design. It does not show where components will physically sit on the PCB.</p>
+    </div>
+  </details>
+  <details class="details editor-details">
+    <summary>What are Symbols?</summary>
+    <div>
+      <div class="media-placeholder">Add symbol image here</div>
+      <p><strong>Symbols</strong> are the graphical representations of electrical components that you place in the schematic.</p>
+      <p>A symbol shows important information about a component, especially its <strong>pins and pin numbers</strong>, so KiCad knows how that component connects electrically to the rest of the circuit.</p>
+      <p>KiCad comes with a large library of common symbols for things like resistors, capacitors, ICs, connectors, and microcontrollers.</p>
+      <p>However, not every component will already exist in KiCad. If you are using a more specific or uncommon part, you may need to:</p>
+      <ul>
+        <li>Import a symbol provided by the manufacturer or another library.</li>
+        <li>Create your own symbol using KiCad's <strong>Symbol Editor</strong>.</li>
+      </ul>
+      <p>The important thing to remember is that a symbol represents the component <strong>electrically</strong>, not physically.</p>
+    </div>
+  </details>
+  <details class="details editor-details">
+    <summary>What are Footprints?</summary>
+    <div>
+      <div class="media-placeholder">Add footprint image here</div>
+      <p>A <strong>footprint</strong> represents the physical shape of a component on the PCB.</p>
+      <p>It defines things such as:</p>
+      <ul>
+        <li>Where the component's pads are located.</li>
+        <li>The size and shape of those pads.</li>
+        <li>The spacing between pins.</li>
+        <li>The component's physical outline.</li>
+        <li>Silkscreen markings and other mechanical information.</li>
+      </ul>
+      <p>For example, a resistor may use the same schematic symbol, but physically it could be a small <strong>0805 SMD resistor</strong> or a much larger <strong>through-hole resistor</strong>. These would use different footprints.</p>
+      <p>KiCad includes a large library of standard footprints for common packages such as DIP, SOIC, QFN, 0805, 0603, and many others.</p>
+      <p>Just like symbols, more unusual components may require you to import a footprint or create your own using KiCad's <strong>Footprint Editor</strong>.</p>
+      <p>A useful way to remember the difference is:</p>
+      <p><strong>Symbol = what the component does electrically.</strong></p>
+      <p><strong>Footprint = what the component looks like physically on the PCB.</strong></p>
+    </div>
+  </details>
+  <details class="details editor-details">
+    <summary>What's the PCB Editor?</summary>
+    <div>
+      <div class="media-placeholder">Add PCB Editor image here</div>
+      <p>The <strong>PCB Editor</strong> is where your schematic is turned into the physical layout of the circuit board.</p>
+      <p>After assigning footprints to your schematic components, you can bring them into the PCB Editor and decide where everything will physically sit.</p>
+      <p>This is where you can:</p>
+      <ul>
+        <li>Position and rotate components.</li>
+        <li>Draw the shape of the PCB.</li>
+        <li>Route copper <strong>traces</strong> between components.</li>
+        <li>Add copper zones, such as a ground plane.</li>
+        <li>Add mounting holes and other mechanical features.</li>
+        <li>Add silkscreen text, labels, logos, and artwork.</li>
+        <li>Configure PCB layers and design rules.</li>
+        <li>Check whether components and traces fit together correctly.</li>
+      </ul>
+      <p>The PCB Editor is essentially a <strong>2D view of the physical circuit board</strong> that will eventually be manufactured.</p>
+      <p>Your schematic tells KiCad <strong>what should be connected</strong>, while the PCB Editor determines <strong>where everything goes and how those connections are physically routed</strong>.</p>
+    </div>
+  </details>
+</section>
+
+<section class="embed-card">
+  <div class="eyebrow">Video Walkthrough</div>
+  <h2>Creating your KiCad Project</h2>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/pmz5uLtKLEk" title="Video walkthrough: creating a KiCad project" loading="lazy" allowfullscreen></iframe>
+  </div>
+</section>
+
+<details class="details card collapsible-card">
+  <summary>
+    <span class="eyebrow">Written Guide</span>
+    <span class="collapsible-title">Step-by-Step: Create a Project</span>
+  </summary>
+  <div class="collapsible-content">
+    <section class="written-guide-section">
+      <h2>Starting a new project</h2>
+      <ol>
+        <li>Open KiCad. You'll see the home screen shown in the overview above.</li>
+        <li>Click <strong>File → New Project</strong>.</li>
+        <li>Select the <strong>Default KiCad project template</strong>.</li>
+        <li>Choose where to save your project and give it a name, for example <strong>USRC_Keychain</strong>.</li>
+        <li>Click <strong>Save</strong>.</li>
+      </ol>
+      <p>The Project Files panel on the left will now show three new files: the project file (<code>.kicad_pro</code>), schematic file (<code>.kicad_sch</code>), and PCB file (<code>.kicad_pcb</code>).</p>
+      <figure class="guide-figure">
+        <img src="../assets/images/Page%203/KiCAD-Project-Created.png" alt="KiCad project manager showing the newly created project and its project, schematic, and PCB files">
+        <figcaption>Figure 2: New project created</figcaption>
+      </figure>
+    </section>
+
+    <section class="written-guide-section">
+      <h2>Opening the Schematic Editor</h2>
+      <p>Double-click the <code>.kicad_sch</code> file in the Project Files panel, or click <strong>Schematic Editor</strong>. A blank page will open. This is where we'll build the circuit in the next lesson.</p>
+    </section>
+  </div>
+</details>
+<section class="checkpoint">
+  <strong>Lesson checkpoint:</strong> You've created your KiCad project.
+</section>
+
+      <nav class="lesson-footer">
+        <a href="02-circuit.html">← Previous</a>
+        <a href="../index.html">Workshop Home</a>
+        <a href="04-schematic.html">Next →</a>
+      </nav>
+    </main>
+  </div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>A Beginners Guide to KiCad · University of Sydney Robotics Club</span>
+    <nav class="footer-socials" aria-label="USRC social links">
+      <a href="https://www.instagram.com/usydrobotics/" target="_blank" rel="noopener noreferrer" aria-label="USRC on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="https://www.facebook.com/usydroboticsclub" target="_blank" rel="noopener noreferrer" aria-label="USRC on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8h3.7Z"/></svg></a>
+      <a href="https://www.linkedin.com/company/usyd-robotics-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="USRC on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M5.2 8.4H2V21h3.2V8.4ZM3.6 2.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM22 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2.1V8.4h-3.1V21h3.2v-6.2c0-1.6.3-3.2 2.4-3.2 2.1 0 2.1 1.9 2.1 3.3V21h3.2v-7.2Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

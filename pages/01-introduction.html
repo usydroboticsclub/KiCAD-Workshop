@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiCad Workshop — Introduction</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">A Beginners Guide to KiCad</a>
+      <div class="top-actions">
+        <a class="button" href="../resources.html">Additional Resources</a>
+        <a class="button credits-link" href="../credits.html">Credits</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    
+<aside class="sidebar">
+  <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
+  <h3>Lessons</h3>
+  <a class="nav-link active" href="01-introduction.html">01 &nbsp; Introduction</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
+<a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
+<a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
+<a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
+<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
+<a class="nav-link" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
+<a class="nav-link" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
+<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+</aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="lesson-number">01</div>
+        <div class="eyebrow">Workshop Overview</div>
+        <h1>Introduction</h1>
+        <p class="lead">What are printed circuit boards (PCBs), why do we need them, and what are the tools we use to design them?</p>
+      </section>
+
+      <section class="card intro-section">
+        <div class="eyebrow">The Basics</div>
+        <h2>What are Printed Circuit Boards (PCBs)?</h2>
+        <div class="intro-image-grid" aria-label="Examples of printed circuit boards">
+          <div class="intro-image-placeholder">Add image: <code>../assets/images/pcb-example-1.jpg</code></div>
+          <div class="intro-image-placeholder">Add image: <code>../assets/images/pcb-example-2.jpg</code></div>
+          <div class="intro-image-placeholder">Add image: <code>../assets/images/pcb-example-3.jpg</code></div>
+        </div>
+        <p>Printed circuit boards are boards designed to provide both mechanical support and electrical connectivity to electronic components. They make it easier to connect many components in one efficient form, saving space that would otherwise be taken up by wiring and making smaller, more complex electronics possible.</p>
+        <p>Nowadays, PCB design has become much more convenient, and manufacturing has become much cheaper. It's now possible for an average person to design, order, and manufacture their own custom PCBs!</p>
+        <p>This is reflected in the fact that designing and manufacturing custom PCBs has become standard practice for student teams at USYD, such as Sydney Motorsports, USYD Rocketry, and SIRI. PCBs are also increasingly common for aesthetic projects, especially among electronics hobbyists and at popular technology conventions such as OpenSauce.</p>
+        <div class="intro-feature-image">
+          <div class="intro-image-placeholder">Add image: <code>../assets/images/usrc-keychain-pcb.jpg</code></div>
+        </div>
+        <p>If that's gotten your attention and you're now eager to design a PCB, you might be wondering how to get started!</p>
+      </section>
+
+      <section class="card intro-section">
+        <img class="intro-kicad-logo" src="https://www.kicad.org/favicon-96x96.png" alt="KiCad logo" width="48" height="48">
+        <div class="eyebrow">PCB Design Software</div>
+        <h2>Enter: KiCad</h2>
+        <p>KiCad is one of the most commonly used open-source software packages for PCB design. It has the tools needed throughout the PCB design process, a large standard library of component symbols and footprints, a wide variety of community-maintained plugins, simulation features, and much more.</p>
+        <p>We won't be able to cover every feature KiCad offers in this workshop, but we'll take you through the basics and some additional tools to help you get started.</p>
+      </section>
+
+      <section class="card intro-section">
+        <div class="eyebrow">Get Started</div>
+        <h2>Download KiCad 10.0</h2>
+        <p>This workshop uses KiCad 10.0. If you haven't already, download KiCad from the <a href="https://www.kicad.org/download/" target="_blank" rel="noopener noreferrer">official KiCad downloads page</a>. Choose the installer for your computer's operating system.</p>
+        <h3>Downloading from Australia</h3>
+        <p>If the download page offers a choice of mirrors, select Australia (AARNet).</p>
+        <a class="button" href="https://www.kicad.org/download/" target="_blank" rel="noopener noreferrer">Open downloads page (choose Australia / AARNet)</a>
+      </section>
+
+      <section class="callout warning intro-disclaimer" aria-labelledby="intro-disclaimer-title">
+        <p><strong id="intro-disclaimer-title">Disclaimer:</strong> This workshop documentation was created on a Windows device, so the visuals may look different for macOS or Linux users. The overall steps and processes should be the same. If you're attending the workshop in person and feel stuck, reach out to one of our volunteers and they'll be happy to help!</p>
+      </section>
+
+<section class="checkpoint">
+  <strong>Lesson checkpoint:</strong> You should have KiCad 10.0 installed and ready to use.
+</section>
+
+      <nav class="lesson-footer">
+        <span></span>
+        <a href="../index.html">Workshop Home</a>
+        <a href="02-circuit.html">Next →</a>
+      </nav>
+    </main>
+  </div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>A Beginners Guide to KiCad · University of Sydney Robotics Club</span>
+    <nav class="footer-socials" aria-label="USRC social links">
+      <a href="https://www.instagram.com/usydrobotics/" target="_blank" rel="noopener noreferrer" aria-label="USRC on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="https://www.facebook.com/usydroboticsclub" target="_blank" rel="noopener noreferrer" aria-label="USRC on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8h3.7Z"/></svg></a>
+      <a href="https://www.linkedin.com/company/usyd-robotics-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="USRC on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M5.2 8.4H2V21h3.2V8.4ZM3.6 2.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM22 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2.1V8.4h-3.1V21h3.2v-6.2c0-1.6.3-3.2 2.4-3.2 2.1 0 2.1 1.9 2.1 3.3V21h3.2v-7.2Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

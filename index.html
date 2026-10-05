@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USRC KiCad PCB Workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">A Beginners Guide to KiCad</a>
+      <div class="top-actions">
+        <a class="button" href="resources.html">Additional Resources</a>
+        <a class="button credits-link" href="credits.html">Credits</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width:1180px;margin:0 auto;padding:34px 24px 70px;">
+    <section class="hero homepage-hero">
+      <img class="hero-watermark" src="assets/images/USRCLogo.svg" alt="" aria-hidden="true">
+      <div class="eyebrow">By The University of Sydney Robotics Club.</div>
+      <h1>Design your first PCB in KiCad</h1>
+      <p class="lead">Welcome! This is a step-by-step workshop guide to take you through the basics of KiCad. We’ll be working on a flashing PCB Keychain in the shape of the USRC Logo, and you’ll be taken through the entire PCB designing process from making your schematic, assigning and making your own symbols and footprints, laying your board out, and more!</p>
+      <div class="top-actions" style="margin-top:20px;">
+        <a class="button primary" href="pages/01-introduction.html">Start Workshop</a>
+        <a class="button" href="README.md">Setup Notes</a>
+      </div>
+    </section>
+
+    <section class="callout warning" aria-labelledby="workshop-disclaimer">
+      <p><strong id="workshop-disclaimer">Disclaimer:</strong> This workshop was created using KiCad 10.0 on Windows. The general steps should be similar on other operating systems, but some visuals and interface details may differ.</p>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">Workshop Path</div>
+      <h2>Work through each section</h2>
+      <div class="grid">
+        <a class="home-card" href="pages/01-introduction.html">
+      <span>01</span>
+      <h3>Introduction</h3>
+      <p>What are printed circuit boards (PCBs), why do we need them, and what are the tools we use to design them?</p>
+    </a>
+<a class="home-card" href="pages/02-circuit.html">
+      <span>02</span>
+      <h3>Understanding the Circuit</h3>
+      <p>Explore the circuit you'll build in this workshop and see how its components work together.</p>
+    </a>
+<a class="home-card" href="pages/03-create-project.html">
+      <span>03</span>
+      <h3>Creating a Project</h3>
+      <p>An overview of KiCad's features, plus getting started with your project.</p>
+    </a>
+<a class="home-card" href="pages/04-schematic.html">
+      <span>04</span>
+      <h3>Building the Schematic</h3>
+      <p>Using the Schematic Editor to place circuit symbols and begin drawing your design in KiCad.</p>
+    </a>
+<a class="home-card" href="pages/05-symbols.html">
+      <span>05</span>
+      <h3>Assigning Footprints</h3>
+      <p>Choosing schematic symbols for your circuit and assigning footprints that match the physical components.</p>
+    </a>
+<a class="home-card" href="pages/06-footprints.html">
+      <span>06</span>
+      <h3>Custom Symbols & Footprints</h3>
+      <p>Building project library symbols and footprints for components that aren't included in KiCad's libraries.</p>
+    </a>
+<a class="home-card" href="pages/07-pcb-layout.html">
+      <span>07</span>
+      <h3>Layout Editor Overview</h3>
+      <p>An overview of the PCB Layout editor, and a brief introduction to board settings.</p>
+    </a>
+<a class="home-card" href="pages/08-board-outline-layers-routing.html">
+      <span>08</span>
+      <h3>Board Layers and Outline</h3>
+      <p>An overview of PCB layers and how to use them to create complex board outlines, copper pours, and exposed copper areas.</p>
+    </a>
+<a class="home-card" href="pages/09-component-placement-drc.html">
+      <span>09</span>
+      <h3>Component Placement and Routing</h3>
+      <p>Arranging components and routing tracks to connect components on the PCB.</p>
+    </a>
+<a class="home-card" href="pages/10-3d-viewer.html">
+      <span>10</span>
+      <h3>Board Validation with DRC</h3>
+      <p>Running the Design Rules Checker to find and resolve any layout issues before manufacturing.</p>
+    </a>
+<a class="home-card" href="pages/11-manufacturing.html">
+      <span>11</span>
+      <h3>Exporting for Manufacturing</h3>
+      <p>Exporting gerber and drill files to your device and sending it to a manufacturer to fabricate your finished PCB.</p>
+    </a>
+<a class="home-card" href="pages/12-submissions.html">
+      <span>12</span>
+      <h3>Design Submission</h3>
+      <p>Gather your completed project and output files, then submit your design here!</p>
+    </a>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>A Beginners Guide to KiCad · University of Sydney Robotics Club</span>
+    <nav class="footer-socials" aria-label="USRC social links">
+      <a href="https://www.instagram.com/usydrobotics/" target="_blank" rel="noopener noreferrer" aria-label="USRC on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="https://www.facebook.com/usydroboticsclub" target="_blank" rel="noopener noreferrer" aria-label="USRC on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8h3.7Z"/></svg></a>
+      <a href="https://www.linkedin.com/company/usyd-robotics-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="USRC on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M5.2 8.4H2V21h3.2V8.4ZM3.6 2.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM22 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2.1V8.4h-3.1V21h3.2v-6.2c0-1.6.3-3.2 2.4-3.2 2.1 0 2.1 1.9 2.1 3.3V21h3.2v-7.2Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

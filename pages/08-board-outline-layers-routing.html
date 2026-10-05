@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiCad Workshop — Board Layers and Outline</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">A Beginners Guide to KiCad</a>
+      <div class="top-actions">
+        <a class="button" href="../resources.html">Additional Resources</a>
+        <a class="button credits-link" href="../credits.html">Credits</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    
+<aside class="sidebar">
+  <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
+  <h3>Lessons</h3>
+  <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
+<a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
+<a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
+<a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
+<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
+<a class="nav-link active" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
+<a class="nav-link" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
+<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+</aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="lesson-number">08</div>
+        <div class="eyebrow">Board Definition</div>
+        <h1>Board Layers and Outline</h1>
+        <p class="lead">An overview of PCB layers and how to use them to create complex board outlines, copper pours, and exposed copper areas.</p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">Board Definition</div>
+        <h2>Define the board shape and copper features</h2>
+        <p>Use the PCB layer system to draw the board outline, add copper zones, and identify areas of exposed copper. Placing each feature on the correct layer helps KiCad and the manufacturer interpret your design.</p>
+      </section>
+
+      <section class="embed-card">
+        <div class="eyebrow">Video Walkthrough</div>
+        <h2>Board Layers and Outline</h2>
+        <p>Add the YouTube video ID to the embed URL when your step-by-step video is ready.</p>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video walkthrough: PCB layers and board outline" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </section>
+
+<details class="details card collapsible-card">
+  <summary>
+    <span class="eyebrow">Written Guide</span>
+    <span class="collapsible-title">Step-by-Step: Set Up Layers and the Board Outline</span>
+  </summary>
+  <div class="collapsible-content">
+<section class="step-card">
+  <div class="step-index">01</div>
+  <div>
+    <h2>Draw the board outline</h2>
+    <p>Use the Edge.Cuts layer to draw a closed outline for the PCB shape.</p>
+    <div class="media-placeholder">Add screenshot: Board outline on Edge.Cuts</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">02</div>
+  <div>
+    <h2>Understand the board layers</h2>
+    <p>Use the layer selector to view the front and back copper layers, silkscreen, solder mask, and Edge.Cuts. Draw each feature on its intended layer so KiCad and the manufacturer can interpret the board correctly.</p>
+    <div class="media-placeholder">Add screenshot: PCB layer selector</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">03</div>
+  <div>
+    <h2>Add copper pours and exposed copper</h2>
+    <p>A copper zone can fill an area on a copper layer, often to connect a net across the board. For exposed copper features, check the solder-mask layer settings and clearances so the intended copper remains uncovered.</p>
+    <div class="media-placeholder">Add screenshot: Copper zone and solder-mask layers</div>
+  </div>
+</section>
+  </div>
+</details>
+<section class="checkpoint">
+  <strong>Lesson checkpoint:</strong> The board outline and copper features are drawn on their intended layers.
+</section>
+
+      <nav class="lesson-footer">
+        <a href="07-pcb-layout.html">← Previous</a>
+        <a href="../index.html">Workshop Home</a>
+        <a href="09-component-placement-drc.html">Next →</a>
+      </nav>
+    </main>
+  </div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>A Beginners Guide to KiCad · University of Sydney Robotics Club</span>
+    <nav class="footer-socials" aria-label="USRC social links">
+      <a href="https://www.instagram.com/usydrobotics/" target="_blank" rel="noopener noreferrer" aria-label="USRC on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="https://www.facebook.com/usydroboticsclub" target="_blank" rel="noopener noreferrer" aria-label="USRC on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8h3.7Z"/></svg></a>
+      <a href="https://www.linkedin.com/company/usyd-robotics-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="USRC on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-fill" d="M5.2 8.4H2V21h3.2V8.4ZM3.6 2.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM22 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2.1V8.4h-3.1V21h3.2v-6.2c0-1.6.3-3.2 2.4-3.2 2.1 0 2.1 1.9 2.1 3.3V21h3.2v-7.2Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
