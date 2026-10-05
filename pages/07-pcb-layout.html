@@ -28,14 +28,14 @@
   <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
   <h3>Lessons</h3>
   <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
-<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Getting Familiar with the Circuit</a>
 <a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
 <a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
 <a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
 <a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
 <a class="nav-link active" href="07-pcb-layout.html">07 &nbsp; PCB Layout, Layers and Outline</a>
-<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Component Placement and Routing</a>
-<a class="nav-link" href="10-3d-viewer.html">09 &nbsp; Board Validation &amp; Manufacturing</a>
+<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Placement, Routing and Board Validation</a>
+<a class="nav-link" href="11-manufacturing.html">09 &nbsp; Manufacturing</a>
 <a class="nav-link" href="12-submissions.html">10 &nbsp; Design Submission</a>
 </aside>
 
@@ -53,13 +53,22 @@
         <p>Transfer the schematic components into the PCB Editor, get familiar with board settings, then use the layer system to draw the board outline, add copper zones, and identify exposed copper areas.</p>
       </section>
 
-      <section class="catch-up-panel" aria-labelledby="catch-up-title">
+      <section class="catch-up-panel" aria-labelledby="catch-up-title" data-download-gate data-download-password="mocha">
         <div class="catch-up-copy">
           <div class="eyebrow">Need a hand?</div>
           <h2 id="catch-up-title">Falling behind? Pick up from here.</h2>
           <p>Download the completed workshop schematic project and continue with the PCB layout.</p>
         </div>
-        <a class="button catch-up-button" href="../assets/downloads/usrc-keychain-workshop-schematic.zip" download="USRC_Keychain_Workshop_Schematic_F.zip">Download Workshop Schematic</a>
+        <form class="catch-up-gate" data-download-gate-form>
+          <label for="catch-up-password">Workshop password</label>
+          <p class="catch-up-gate-hint">The password will be revealed sometime in the workshop, please don't try to crack it earlier 🙏, Only download it if you need to.</p>
+          <div class="catch-up-gate-controls">
+            <input id="catch-up-password" name="password" type="password" autocomplete="off" required>
+            <button class="button catch-up-button" type="submit">Unlock Download</button>
+          </div>
+          <p class="catch-up-gate-message" data-download-gate-message aria-live="polite"></p>
+          <a class="button catch-up-button" href="../assets/downloads/usrc-keychain-workshop-schematic.zip" download="USRC_Keychain_Workshop_Schematic_F.zip" data-protected-download hidden>Download Workshop Schematic</a>
+        </form>
       </section>
 
       <section class="card">
@@ -72,12 +81,24 @@
         </div>
       </section>
 
+      <details class="details card collapsible-card">
+        <summary>
+          <span class="eyebrow">Optional Walkthrough</span>
+          <span class="collapsible-title">Electrical Rules Checker (ERC)</span>
+        </summary>
+        <div class="collapsible-content">
+          <p>Run the Electrical Rules Checker to review your schematic for connection issues before moving on to the PCB layout.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/Ui85y8kV8c4" title="Video walkthrough: Electrical Rules Checker (ERC)" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </details>
+
       <section class="embed-card">
         <div class="eyebrow">Video Walkthrough</div>
         <h2>PCB Layout Editor</h2>
-        <p>Add the YouTube video ID to the embed URL when your step-by-step video is ready.</p>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video walkthrough: PCB layout editor overview" loading="lazy" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/aHjeC84DzhY" title="Video walkthrough: PCB layout editor overview" loading="lazy" allowfullscreen></iframe>
         </div>
       </section>
 

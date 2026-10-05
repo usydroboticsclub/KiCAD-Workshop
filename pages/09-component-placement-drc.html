@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KiCad Workshop — Component Placement and Routing</title>
+  <title>KiCad Workshop — Placement, Routing and Board Validation</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -28,14 +28,14 @@
   <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
   <h3>Lessons</h3>
   <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
-<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Getting Familiar with the Circuit</a>
 <a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
 <a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
 <a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
 <a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
 <a class="nav-link" href="07-pcb-layout.html">07 &nbsp; PCB Layout, Layers and Outline</a>
-<a class="nav-link active" href="09-component-placement-drc.html">08 &nbsp; Component Placement and Routing</a>
-<a class="nav-link" href="10-3d-viewer.html">09 &nbsp; Board Validation &amp; Manufacturing</a>
+<a class="nav-link active" href="09-component-placement-drc.html">08 &nbsp; Placement, Routing and Board Validation</a>
+<a class="nav-link" href="11-manufacturing.html">09 &nbsp; Manufacturing</a>
 <a class="nav-link" href="12-submissions.html">10 &nbsp; Design Submission</a>
 </aside>
 
@@ -43,29 +43,49 @@
       <section class="hero">
         <div class="lesson-number">08</div>
         <div class="eyebrow">Placement &amp; Verification</div>
-        <h1>Component Placement and Routing</h1>
-        <p class="lead">Arranging components and routing tracks to connect components on the PCB.</p>
+        <h1>Placement, Routing and Board Validation</h1>
+        <p class="lead">Arrange components, route the board, run design rule checks, and inspect the finished PCB in 3D.</p>
       </section>
 
       <section class="card">
         <div class="eyebrow">PCB Layout</div>
         <h2>Place components and connect the circuit</h2>
-        <p>Review the position and orientation of each component, then route tracks to connect the pads while keeping the board practical to assemble.</p>
+        <p>Review the position and orientation of each component, route tracks to connect the pads, then check the finished layout against KiCad's design rules.</p>
       </section>
 
       <section class="embed-card">
         <div class="eyebrow">Video Walkthrough</div>
         <h2>Component Placement and Routing</h2>
-        <p>Add the YouTube video ID to the embed URL when your step-by-step video is ready.</p>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video walkthrough: component placement and PCB routing" loading="lazy" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/2_dDWBQT3nQ" title="Video walkthrough: component placement and PCB routing" loading="lazy" allowfullscreen></iframe>
         </div>
       </section>
+
+      <section class="embed-card">
+        <div class="eyebrow">Video Walkthrough</div>
+        <h2>Board Validation with DRC</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/G10CsZm7c6o" title="Video walkthrough: PCB validation with DRC" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <details class="details card collapsible-card">
+        <summary>
+          <span class="eyebrow">Optional Walkthrough</span>
+          <span class="collapsible-title">Adding Text with Silkscreen</span>
+        </summary>
+        <div class="collapsible-content">
+          <p>Learn how to add text to your PCB using KiCad's silkscreen layers. This walkthrough is optional.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/enPftfYUGEE" title="Optional video walkthrough: adding text to a PCB with silkscreen" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </details>
 
 <details class="details card collapsible-card">
   <summary>
     <span class="eyebrow">Written Guide</span>
-    <span class="collapsible-title">Step-by-Step: Place Components and Route Tracks</span>
+    <span class="collapsible-title">Step-by-Step: Place, Route and Validate the Board</span>
   </summary>
   <div class="collapsible-content">
 <section class="step-card">
@@ -86,16 +106,35 @@
     <div class="checkpoint"><strong>✓ Checkpoint:</strong> The ratsnest lines disappear as their connections are routed.</div>
   </div>
 </section>
+
+<section class="step-card">
+  <div class="step-index">03</div>
+  <div>
+    <h2>Run the Design Rules Checker</h2>
+    <p>Run DRC after routing to check clearances, board constraints, and unconnected items. Review each reported issue, correct the ones that apply, and rerun the check to confirm the board is ready for final review.</p>
+    <div class="media-placeholder">Add screenshot: DRC results window</div>
+    <div class="callout warning"><strong>Review every result.</strong> Don't dismiss errors or warnings until you understand whether they need to be fixed.</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">04</div>
+  <div>
+    <h2>Preview the board in 3D</h2>
+    <p>Open KiCad's 3D Viewer to inspect component orientation, overall placement, and the finished board shape.</p>
+    <div class="media-placeholder">Add screenshot: 3D Viewer render</div>
+  </div>
+</section>
   </div>
 </details>
 <section class="checkpoint">
-  <strong>Lesson checkpoint:</strong> Components are arranged clearly, and the required connections are routed.
+  <strong>Lesson checkpoint:</strong> Components are arranged, connections are routed, DRC results are reviewed, and the board has been inspected in 3D.
 </section>
 
       <nav class="lesson-footer">
         <a href="07-pcb-layout.html">← Previous</a>
         <a href="../index.html">Workshop Home</a>
-        <a href="10-3d-viewer.html">Next →</a>
+        <a href="11-manufacturing.html">Next →</a>
       </nav>
     </main>
   </div>

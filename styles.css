@@ -400,6 +400,70 @@ h3 { margin-bottom: 8px; }
   color: var(--muted);
 }
 
+.catch-up-gate {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 10px;
+  width: min(100%, 360px);
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.catch-up-gate label {
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.catch-up-gate-hint {
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+.catch-up-gate-controls {
+  display: grid;
+  gap: 10px;
+}
+
+.catch-up-gate input {
+  min-width: 0;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.catch-up-gate input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.catch-up-gate-controls .catch-up-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.catch-up-gate-message {
+  min-height: 1.25em;
+  margin: 0;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.catch-up-gate [data-protected-download] {
+  justify-self: start;
+}
+
+.catch-up-gate [data-protected-download][hidden] {
+  display: none;
+}
+
 .catch-up-button {
   flex: 0 0 auto;
   background: var(--accent);
@@ -623,6 +687,17 @@ kbd {
   margin: 18px 0 22px;
 }
 
+.intro-example-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
 .intro-image-placeholder {
   min-height: 150px;
   display: grid;
@@ -782,5 +857,6 @@ kbd {
   .grid { grid-template-columns: 1fr; }
   .lesson-footer { flex-direction: column; }
   .simulation-wrapper { height: 560px; }
-  .catch-up-panel { flex-direction: column; align-items: flex-start; padding: 22px; }
+  .catch-up-panel { flex-direction: column; align-items: stretch; padding: 22px; }
+  .catch-up-gate { width: 100%; }
 }

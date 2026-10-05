@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KiCad Workshop — Understanding the Circuit</title>
+  <title>KiCad Workshop — Getting Familiar with the Circuit</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -28,14 +28,14 @@
   <a class="brand" href="../index.html" style="display:block;margin-bottom:10px;">Workshop Contents</a>
   <h3>Lessons</h3>
   <a class="nav-link" href="01-introduction.html">01 &nbsp; Introduction</a>
-<a class="nav-link" href="02-circuit.html">02 &nbsp; Understanding the Circuit</a>
+<a class="nav-link" href="02-circuit.html">02 &nbsp; Getting Familiar with the Circuit</a>
 <a class="nav-link" href="03-create-project.html">03 &nbsp; Creating a Project</a>
 <a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
 <a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
 <a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
 <a class="nav-link" href="07-pcb-layout.html">07 &nbsp; PCB Layout, Layers and Outline</a>
-<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Component Placement and Routing</a>
-<a class="nav-link" href="10-3d-viewer.html">09 &nbsp; Board Validation &amp; Manufacturing</a>
+<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Placement, Routing and Board Validation</a>
+<a class="nav-link" href="11-manufacturing.html">09 &nbsp; Manufacturing</a>
 <a class="nav-link" href="12-submissions.html">10 &nbsp; Design Submission</a>
 </aside>
 
@@ -43,7 +43,7 @@
       <section class="hero">
         <div class="lesson-number">02</div>
         <div class="eyebrow">Circuit Fundamentals</div>
-        <h1>Understanding the Circuit</h1>
+        <h1>Getting Familiar with the Circuit</h1>
         <p class="lead">Explore the circuit you'll build in this workshop and see how its components work together.</p>
       </section>
 
@@ -52,7 +52,14 @@
       </section>
 
       <section class="card">
-        <div class="eyebrow">Understanding the Circuit</div>
+        <div class="eyebrow">Workshop Outcome</div>
+        <h2>The Goal</h2>
+        <div class="media-placeholder">Add an image of the finished workshop project here</div>
+        <p>This image shows what you should end up with by the end of this workshop: a completed USRC logo PCB keychain.</p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">Getting Familiar with the Circuit</div>
         <h2>Simulating Our Keychain</h2>
         <p>The circuit we'll be making today is a simple 555 timer circuit that flashes a group of LEDs in parallel. The simulation below shows the circuit using Falstad's circuit simulator.</p>
         <div class="simulation-wrapper">
@@ -64,6 +71,18 @@
         </div>
         <p><a class="button" href="https://www.falstad.com/s.php?s=ahEftJ" target="_blank" rel="noopener noreferrer">Open the circuit in Falstad in a new tab</a></p>
       </section>
+
+      <details class="details card collapsible-card">
+        <summary>
+          <span class="eyebrow">A List of Parts</span>
+          <span class="collapsible-title">Electrical Components in Use</span>
+        </summary>
+        <div class="collapsible-content">
+          <p>Falstad is a website-based circuit simulation tool that lets you visualise current flow using moving dots and view a slowed-down version of circuit behaviour via scopes on the bottom bar. If you need a refresher on how electricity works, current flows from high to low potential energy.</p>
+          <p>The lowest potential energy in this circuit is represented by the ground (GND) symbol. Areas with higher potential energy are represented by a green gradient. GND is the 0 V reference point for the rest of the circuit; other voltages are measured relative to it.</p>
+          <p>VCC is commonly used as a label for the circuit's positive supply rail, such as +3.3 V or +5 V. It is a connection label here, not a separate power source.</p>
+        </div>
+      </details>
 
       <details class="details card collapsible-card">
         <summary>
