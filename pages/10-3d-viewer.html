@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KiCad Workshop — Board Validation with DRC</title>
+  <title>KiCad Workshop — Board Validation and Manufacturing</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -33,26 +33,24 @@
 <a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
 <a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
 <a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
-<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
-<a class="nav-link" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
-<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
-<a class="nav-link active" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
-<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
-<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+<a class="nav-link" href="07-pcb-layout.html">07 &nbsp; PCB Layout, Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Component Placement and Routing</a>
+<a class="nav-link active" href="10-3d-viewer.html">09 &nbsp; Board Validation &amp; Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">10 &nbsp; Design Submission</a>
 </aside>
 
     <main class="content">
       <section class="hero">
-        <div class="lesson-number">10</div>
+        <div class="lesson-number">09</div>
         <div class="eyebrow">Board Validation</div>
-        <h1>Board Validation with DRC</h1>
-        <p class="lead">Running the Design Rules Checker to find and resolve any layout issues before manufacturing.</p>
+        <h1>Board Validation and Manufacturing</h1>
+        <p class="lead">Run the Design Rules Checker, inspect your finished board, and export Gerber and drill files for fabrication.</p>
       </section>
 
       <section class="card">
         <div class="eyebrow">Board Validation</div>
         <h2>Check your board before manufacturing</h2>
-        <p>Run the Design Rules Checker (DRC) to catch layout issues, review its results, and inspect the completed board in 3D.</p>
+        <p>Run the Design Rules Checker (DRC) to catch layout issues, inspect the completed board in 3D, then prepare the Gerber and drill files required by a manufacturer.</p>
       </section>
 
       <section class="embed-card">
@@ -64,36 +62,73 @@
         </div>
       </section>
 
+      <section class="embed-card">
+        <div class="eyebrow">Video Walkthrough</div>
+        <h2>Exporting for Manufacturing</h2>
+        <p>Add the YouTube video ID to the embed URL when your step-by-step video is ready.</p>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video walkthrough: exporting PCB files for manufacturing" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </section>
+
       <details class="details card collapsible-card">
         <summary>
           <span class="eyebrow">Written Guide</span>
-          <span class="collapsible-title">Step-by-Step: Validate the Board</span>
+          <span class="collapsible-title">Step-by-Step: Validate and Export the Board</span>
         </summary>
         <div class="collapsible-content">
-      <section class="card">
-        <div class="eyebrow">Design Rule Check</div>
-        <h2>Run the Design Rules Checker</h2>
-        <p>Run DRC after routing to check clearances, board constraints, and unconnected items. Review each reported issue, correct the ones that apply, and rerun the check to confirm the board is ready for final review.</p>
-        <div class="media-placeholder">Add screenshot: DRC results window</div>
-        <div class="callout warning"><strong>Review every result.</strong> Don't dismiss errors or warnings until you understand whether they need to be fixed.</div>
+      <section class="step-card">
+        <div class="step-index">01</div>
+        <div>
+          <h2>Run the Design Rules Checker</h2>
+          <p>Run DRC after routing to check clearances, board constraints, and unconnected items. Review each reported issue, correct the ones that apply, and rerun the check to confirm the board is ready for final review.</p>
+          <div class="media-placeholder">Add screenshot: DRC results window</div>
+          <div class="callout warning"><strong>Review every result.</strong> Don't dismiss errors or warnings until you understand whether they need to be fixed.</div>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-index">02</div>
+        <div>
+          <h2>Preview the board in 3D</h2>
+          <p>Open KiCad's 3D Viewer to inspect component orientation, overall placement, and the finished board shape.</p>
+          <div class="media-placeholder">Add screenshot: 3D Viewer render</div>
+        </div>
       </section>
 
       <section class="card">
-        <div class="eyebrow">Visual Check</div>
-        <h2>Preview the board in 3D</h2>
-        <p>Open KiCad's 3D Viewer to inspect component orientation, overall placement, and the finished board shape.</p>
-        <div class="media-placeholder">Add screenshot: 3D Viewer render</div>
+        <div class="eyebrow">Fabrication Output</div>
+        <h2>Prepare your board for manufacturing</h2>
+        <p>Export the Gerber and drill files that communicate your PCB's copper layers, board outline, and hole locations to a manufacturer.</p>
+      </section>
+
+      <section class="step-card">
+        <div class="step-index">03</div>
+        <div>
+          <h2>Plot Gerber files</h2>
+          <p>Open the fabrication output dialog and select the layers required by your PCB manufacturer.</p>
+          <div class="media-placeholder">Add screenshot: Plot/Gerber dialog</div>
+        </div>
+      </section>
+
+      <section class="step-card">
+        <div class="step-index">04</div>
+        <div>
+          <h2>Generate drill files</h2>
+          <p>Create Excellon drill files and place them with your Gerbers.</p>
+          <div class="checkpoint"><strong>✓ Finish:</strong> Zip the manufacturing outputs before upload.</div>
+        </div>
       </section>
         </div>
       </details>
       <section class="checkpoint">
-        <strong>Lesson checkpoint:</strong> You have reviewed the DRC results, addressed relevant issues, and inspected the board in 3D.
+        <strong>Lesson checkpoint:</strong> You have reviewed the DRC results, inspected the board in 3D, and exported Gerber and drill files ready for fabrication.
       </section>
 
       <nav class="lesson-footer">
         <a href="09-component-placement-drc.html">← Previous</a>
         <a href="../index.html">Workshop Home</a>
-        <a href="11-manufacturing.html">Next →</a>
+        <a href="12-submissions.html">Next →</a>
       </nav>
     </main>
   </div>

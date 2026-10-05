@@ -73,6 +73,7 @@ Each workshop lesson is independent. For example:
 
 - `pages/04-schematic.html` controls only the schematic page.
 - `pages/05-symbols.html` controls the symbols and custom symbols lesson.
-- `pages/08-board-outline-layers-routing.html` controls the board outlines, layers, and routing lesson.
+- `pages/07-pcb-layout.html` covers the PCB Editor overview, board layers, and board outline.
+- `pages/10-3d-viewer.html` covers board validation, the 3D Viewer, and manufacturing exports.
 
 Styling remains shared through `styles.css`.

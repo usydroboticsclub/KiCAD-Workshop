@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KiCad Workshop — Layout Editor Overview</title>
+  <title>KiCad Workshop — PCB Layout, Layers and Outline</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -33,26 +33,24 @@
 <a class="nav-link" href="04-schematic.html">04 &nbsp; Building the Schematic</a>
 <a class="nav-link" href="05-symbols.html">05 &nbsp; Assigning Footprints</a>
 <a class="nav-link" href="06-footprints.html">06 &nbsp; Custom Symbols &amp; Footprints</a>
-<a class="nav-link active" href="07-pcb-layout.html">07 &nbsp; Layout Editor Overview</a>
-<a class="nav-link" href="08-board-outline-layers-routing.html">08 &nbsp; Board Layers and Outline</a>
-<a class="nav-link" href="09-component-placement-drc.html">09 &nbsp; Component Placement and Routing</a>
-<a class="nav-link" href="10-3d-viewer.html">10 &nbsp; Board Validation with DRC</a>
-<a class="nav-link" href="11-manufacturing.html">11 &nbsp; Exporting for Manufacturing</a>
-<a class="nav-link" href="12-submissions.html">12 &nbsp; Design Submission</a>
+<a class="nav-link active" href="07-pcb-layout.html">07 &nbsp; PCB Layout, Layers and Outline</a>
+<a class="nav-link" href="09-component-placement-drc.html">08 &nbsp; Component Placement and Routing</a>
+<a class="nav-link" href="10-3d-viewer.html">09 &nbsp; Board Validation &amp; Manufacturing</a>
+<a class="nav-link" href="12-submissions.html">10 &nbsp; Design Submission</a>
 </aside>
 
     <main class="content">
       <section class="hero">
         <div class="lesson-number">07</div>
         <div class="eyebrow">Board Layout</div>
-        <h1>Layout Editor Overview</h1>
-        <p class="lead">An overview of the PCB Layout editor, and a brief introduction to board settings.</p>
+        <h1>PCB Layout, Layers and Outline</h1>
+        <p class="lead">Bring your schematic into the PCB Editor, define the board outline, and work with copper layers and exposed copper features.</p>
       </section>
 
       <section class="card">
         <div class="eyebrow">PCB Layout</div>
         <h2>Move your schematic into the board editor</h2>
-        <p>Transfer the schematic components into the PCB Editor, arrange them within the board area, and get familiar with the settings you'll use to define your board.</p>
+        <p>Transfer the schematic components into the PCB Editor, get familiar with board settings, then use the layer system to draw the board outline, add copper zones, and identify exposed copper areas.</p>
       </section>
 
       <section class="catch-up-panel" aria-labelledby="catch-up-title">
@@ -64,9 +62,19 @@
         <a class="button catch-up-button" href="../assets/downloads/usrc-keychain-workshop-schematic.zip" download="USRC_Keychain_Workshop_Schematic_F.zip">Download Workshop Schematic</a>
       </section>
 
+      <section class="card">
+        <div class="eyebrow">Workshop Files</div>
+        <h2>Download the board design files</h2>
+        <p>Use the DXF file for the board outline and the SVG file for the exposed copper layer.</p>
+        <div class="top-actions download-actions" style="margin-top:18px;">
+          <a class="button" href="../assets/USRCLOGO_ForPCB_Outline.dxf" download="USRCLOGO_ForPCB_Outline.dxf">Download Board Outline (DXF)</a>
+          <a class="button" href="../assets/downloads/USRCLOGO_ForPCB_InnerExposedCopper.svg" download="USRCLOGO_ForPCB_InnerExposedCopper.svg">Download Exposed Copper (SVG)</a>
+        </div>
+      </section>
+
       <section class="embed-card">
         <div class="eyebrow">Video Walkthrough</div>
-        <h2>Layout Editor Overview</h2>
+        <h2>PCB Layout Editor</h2>
         <p>Add the YouTube video ID to the embed URL when your step-by-step video is ready.</p>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video walkthrough: PCB layout editor overview" loading="lazy" allowfullscreen></iframe>
@@ -76,7 +84,7 @@
 <details class="details card collapsible-card">
   <summary>
     <span class="eyebrow">Written Guide</span>
-    <span class="collapsible-title">Step-by-Step: Start the PCB Layout</span>
+    <span class="collapsible-title">Step-by-Step: Start the PCB Layout and Define Board Layers</span>
   </summary>
   <div class="collapsible-content">
 <section class="step-card">
@@ -101,20 +109,38 @@
   <div class="step-index">03</div>
   <div>
     <h2>Take a look at board setup</h2>
-    <p>Open Board Setup to see where KiCad organises board layers and design rules. You'll review the layer options and define the board outline in the next lesson.</p>
+    <p>Open Board Setup to see where KiCad organises board layers and design rules. Use the layer selector to view front and back copper, silkscreen, solder mask, and Edge.Cuts. Draw each feature on its intended layer.</p>
     <div class="media-placeholder">Add screenshot: Board Setup dialog</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">04</div>
+  <div>
+    <h2>Draw the board outline</h2>
+    <p>Use the Edge.Cuts layer to draw a closed outline for the PCB shape.</p>
+    <div class="media-placeholder">Add screenshot: Board outline on Edge.Cuts</div>
+  </div>
+</section>
+
+<section class="step-card">
+  <div class="step-index">05</div>
+  <div>
+    <h2>Add copper pours and exposed copper</h2>
+    <p>A copper zone can fill an area on a copper layer, often to connect a net across the board. For exposed copper features, check the solder-mask layer settings and clearances so the intended copper remains uncovered.</p>
+    <div class="media-placeholder">Add screenshot: Copper zone and solder-mask layers</div>
   </div>
 </section>
   </div>
 </details>
 <section class="checkpoint">
-  <strong>Lesson checkpoint:</strong> Your schematic components are in the PCB Editor, and you know where to find board settings.
+  <strong>Lesson checkpoint:</strong> Your schematic components are in the PCB Editor, and the board outline and copper features are on their intended layers.
 </section>
 
       <nav class="lesson-footer">
         <a href="06-footprints.html">← Previous</a>
         <a href="../index.html">Workshop Home</a>
-        <a href="08-board-outline-layers-routing.html">Next →</a>
+        <a href="09-component-placement-drc.html">Next →</a>
       </nav>
     </main>
   </div>
