@@ -49,8 +49,35 @@
 
       <section class="card">
         <div class="eyebrow">Schematic Design</div>
-        <h2>From circuit idea to schematic</h2>
-        <p>Open the Schematic Editor, add symbols for the components in your circuit, and connect their pins with wires. This schematic records the electrical connections that will later be transferred to the PCB layout.</p>
+        <h2>From Simulation to Schematic</h2>
+        <p>In this section we'll be translating the circuit we have in Falstad to KiCad's Schematic Editor, starting off with common and already available components such as LEDs and resistors, and continuing by assigning footprints to them in the next lesson.</p>
+      </section>
+
+      <section class="card shortcut-card">
+        <div class="eyebrow">Quick Reference</div>
+        <h2>Common Schematic Editor Shortcuts</h2>
+        <div class="shortcut-table-wrap">
+          <table class="shortcut-table">
+            <thead>
+              <tr>
+                <th scope="col">Shortcut</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><kbd>A</kbd></td><td>Place a symbol</td></tr>
+              <tr><td><kbd>W</kbd></td><td>Draw a wire</td></tr>
+              <tr><td><kbd>P</kbd></td><td>Place a power symbol</td></tr>
+              <tr><td><kbd>L</kbd></td><td>Place a net label</td></tr>
+              <tr><td><kbd>R</kbd></td><td>Rotate the selected symbol</td></tr>
+              <tr><td><kbd>X</kbd></td><td>Mirror the selected symbol</td></tr>
+              <tr><td><kbd>E</kbd></td><td>Edit symbol properties</td></tr>
+              <tr><td><kbd>Q</kbd></td><td>Place a no-connect flag</td></tr>
+              <tr><td><kbd>Esc</kbd></td><td>Cancel the current action or stop drawing a wire</td></tr>
+              <tr><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td><td>Save the schematic</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
 <section class="embed-card">
@@ -74,42 +101,6 @@
   </details>
 </section>
 
-<details class="details card collapsible-card">
-  <summary>
-    <span class="eyebrow">Written Guide</span>
-    <span class="collapsible-title">Step-by-Step: Build the Schematic</span>
-  </summary>
-  <div class="collapsible-content">
-<section class="step-card">
-  <div class="step-index">01</div>
-  <div>
-    <h2>Open Schematic Editor</h2>
-    <p>From the project manager, launch the Schematic Editor.</p>
-    <div class="media-placeholder">Add screenshot: Schematic Editor button</div>
-  </div>
-</section>
-
-<section class="step-card">
-  <div class="step-index">02</div>
-  <div>
-    <h2>Place circuit symbols</h2>
-    <p>Hover over the canvas and press <kbd>A</kbd> to open the Symbol Chooser. Search for a component from your circuit, select the matching symbol, and place it on the sheet.</p>
-    <div class="media-placeholder">Add screenshot: Symbol Chooser window</div>
-    <div class="checkpoint"><strong>✓ Checkpoint:</strong> The symbols you need are placed on the schematic sheet.</div>
-  </div>
-</section>
-
-<section class="step-card">
-  <div class="step-index">03</div>
-  <div>
-    <h2>Connect the circuit</h2>
-    <p>Use the wire tool to connect symbol pins according to the circuit you explored in the previous lesson. Keep connections clear and save the project as you work.</p>
-    <div class="checkpoint"><strong>✓ Checkpoint:</strong> Your schematic shows the circuit's components and their intended connections.</div>
-  </div>
-</section>
-
-  </div>
-</details>
 <section class="checkpoint">
   <strong>Lesson checkpoint:</strong> Your schematic includes the circuit symbols and the connections between them.
 </section>

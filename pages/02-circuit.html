@@ -130,12 +130,6 @@
               <img class="circuit-section-image" src="../assets/images/Page2/CoinBattCircuit.png" alt="Battery and SPDT switch section of the circuit">
               <p>The coin cell supplies power to the circuit. The 3.3 V marking represents the voltage of a typical coin cell battery, and the main switch is a single-pole double-throw (SPDT) switch that selects between two paths.</p>
               <p>Labels such as VCC and GND make it easier to show shared connections. In this simulation, VCC is a label for the positive supply rail; the coin cell provides the voltage. GND is connected to the negative side of the battery and acts as the circuit's 0 V reference.</p>
-              <div class="callout tip">
-                <strong>Further resources</strong>
-                <ul class="resource-list">
-                  <li class="resource-placeholder">Add a resource title and link here</li>
-                </ul>
-              </div>
             </div>
           </section>
 
@@ -160,24 +154,7 @@
             <div>
               <h2>LED Array</h2>
               <img class="circuit-section-image" src="../assets/images/Page2/LEDArray.png" alt="LED array with a current-limiting resistor for each LED">
-              <p>The circuit above is an array of LEDs, each with its own 1 kΩ resistor, powered by the output of the 555 timer. The resistors limit the current through the LEDs. For a typical red LED with a forward voltage of about 2 V, the current through each LED is approximately:</p>
-              <div class="display-equation" role="math" aria-label="LED current equals 3.3 volts minus 2 volts, divided by 1 kiloohm, which is approximately 1.3 milliamps">
-                <span class="equation-variable">I</span><sub>LED</sub>
-                <span>=</span>
-                <span class="equation-fraction">
-                  <span>3.3 V − 2 V</span>
-                  <span>1 kΩ</span>
-                </span>
-                <span>≈ 1.3 mA</span>
-              </div>
-              <p>With 10 LEDs, the total current is about 13 mA, within the current rating of the circuit:</p>
-              <div class="display-equation" role="math" aria-label="Total current equals 10 times 1.3 milliamps, which is approximately 13 milliamps">
-                <span class="equation-variable">I</span><sub>total</sub>
-                <span>= 10 × 1.3 mA</span>
-                <span>≈ 13 mA</span>
-              </div>
-              <p>Actual LED forward voltages vary, so use the datasheet for the specific LED when calculating resistor values.</p>
-              <p><strong>Simulation note:</strong> Falstad uses idealised component models, so the simulation and hand calculations may not reflect every real-world variation. Real components can differ from their ideal values; account for those differences when designing a circuit.</p>
+              <p>The 555 timer output powers 10 LEDs. Each LED has its own 1 kΩ resistor to limit current and help protect it. Real LEDs vary, so check the component datasheet when choosing resistor values for a physical circuit.</p>
               <div class="callout tip">
                 <strong>Further resources</strong>
                 <ul class="resource-list">
