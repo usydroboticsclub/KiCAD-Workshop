@@ -48,20 +48,22 @@
       </section>
 
       <section class="callout warning">
-        <strong>Disclaimer:</strong> This section assumes some prior knowledge of electrical concepts, such as voltage and current. Explanations of basic details are kept brief and focus on how the components interact, rather than covering each component from first principles. For deeper background on electrical components and circuit analysis, see the resources linked on the <a href="../resources.html#lesson-2">Additional Resources</a> page or use the navbar button.
+        <strong>Disclaimer:</strong> This section assumes some prior knowledge of electrical concepts, such as voltage and current. Explanations of basic details are kept brief and focus on how the components interact, rather than covering each component from first principles. For deeper background on electrical components and circuit analysis, see the resources linked on the <a href="../resources.html#lesson-2">Additional Resources</a>.
       </section>
 
       <section class="card">
         <div class="eyebrow">Workshop Outcome</div>
         <h2>The Goal</h2>
-        <div class="media-placeholder">Add an image of the finished workshop project here</div>
-        <p>This image shows what you should end up with by the end of this workshop: a completed USRC logo PCB keychain.</p>
+        <div class="goal-image-grid" aria-label="Front and back views of the finished PCB">
+          <img src="../assets/images/Page2/Final_PCB_Front.png" alt="Front view of the finished PCB">
+          <img src="../assets/images/Page2/Final_PCB_Back.png" alt="Back view of the finished PCB">
+        </div>
+        <p>By the end of this workshop, you should be coming out of it with something like shown above. A PCB Design of your own making with all the necessary components on it to make a simple static / flashing light keychain. Files for the board outline and exposed copper layer will be provided for you to follow along with, however if you decide to make your own board outline we're more than happy to accept that as well!</p>
       </section>
 
       <section class="card">
         <div class="eyebrow">Getting Familiar with the Circuit</div>
         <h2>Simulating Our Keychain</h2>
-        <p>The circuit we'll be making today is a simple 555 timer circuit that flashes a group of LEDs in parallel. The simulation below shows the circuit using Falstad's circuit simulator.</p>
         <div class="simulation-wrapper">
           <iframe
             src="https://www.falstad.com/s.php?s=ahEftJ"
@@ -70,6 +72,7 @@
           </iframe>
         </div>
         <p><a class="button" href="https://www.falstad.com/s.php?s=ahEftJ" target="_blank" rel="noopener noreferrer">Open the circuit in Falstad in a new tab</a></p>
+        <p>The circuit we'll be making today is a 555 timer circuit that flashes a group of LEDs connected in parallel as shown in the simulation above. </p>
       </section>
 
       <details class="details card collapsible-card">
@@ -78,21 +81,37 @@
           <span class="collapsible-title">Electrical Components in Use</span>
         </summary>
         <div class="collapsible-content">
-          <p>Falstad is a website-based circuit simulation tool that lets you visualise current flow using moving dots and view a slowed-down version of circuit behaviour via scopes on the bottom bar. If you need a refresher on how electricity works, current flows from high to low potential energy.</p>
-          <p>The lowest potential energy in this circuit is represented by the ground (GND) symbol. Areas with higher potential energy are represented by a green gradient. GND is the 0 V reference point for the rest of the circuit; other voltages are measured relative to it.</p>
-          <p>VCC is commonly used as a label for the circuit's positive supply rail, such as +3.3 V or +5 V. It is a connection label here, not a separate power source.</p>
+          <p>Our design uses seven different electrical components:</p>
+          <ol type="a">
+            <li><strong>Light-emitting diodes (LEDs):</strong> Emit light when current passes through them.</li>
+            <li><strong>Resistors:</strong> Resist the flow of electrical current.</li>
+            <li><strong>Capacitors:</strong> Store and release electrical energy in an electric field.</li>
+            <li><strong>555 timer IC:</strong> An integrated circuit containing resistors, comparators, inverters, and transistors. In this circuit, it generates a continuous flashing signal.</li>
+            <li><strong>Variable resistor (potentiometer):</strong> A resistor whose resistance can be adjusted.</li>
+            <li><strong>Single-pole double-throw (SPDT) switch:</strong> Routes one input to one of two output paths.</li>
+            <li><strong>CR2032 coin-cell battery holder:</strong> Holds a coin-cell battery, a type commonly used in car key fobs, computer motherboards, and low-power remotes.</li>
+          </ol>
+          <p>The specific parts or equivalent packages used for these components are listed below. Datasheets are included where relevant for reference, but you do not need to open them during the workshop.</p>
+          <ul>
+            <li><strong>LED:</strong> 0805 hand-solder package</li>
+            <li><strong>Resistor:</strong> 0805 hand-solder package</li>
+            <li><strong>Capacitor:</strong> 0805 hand-solder package</li>
+            <li><strong>555 timer:</strong> ICM7555xB, SOIC-8 package</li>
+            <li><strong>SPDT switch:</strong> SW_JS102011SAQN</li>
+            <li><strong>Potentiometer:</strong> TRIM_TC33X-2-103E</li>
+            <li><strong>Coin-cell battery holder:</strong> BAT-HLD-003-00-SMT</li>
+          </ul>
         </div>
       </details>
 
       <details class="details card collapsible-card">
         <summary>
-          <span class="eyebrow">Falstad Guide</span>
-          <span class="collapsible-title">How to Read the Simulation</span>
+          <span class="eyebrow">Some Background Knowledge</span>
+          <span class="collapsible-title">Common Electrical Symbols</span>
         </summary>
         <div class="collapsible-content">
-          <p>Falstad is a website-based circuit simulation tool that lets you visualise current flow using moving dots and view a slowed-down version of circuit behaviour via scopes on the bottom bar. If you need a refresher on how electricity works, current flows from high to low potential energy.</p>
-          <p>The lowest potential energy in this circuit is represented by the ground (GND) symbol. Areas with higher potential energy are represented by a green gradient. GND is the 0 V reference point for the rest of the circuit; other voltages are measured relative to it.</p>
-          <p>VCC is commonly used as a label for the circuit's positive supply rail, such as +3.3 V or +5 V. It is a connection label here, not a separate power source.</p>
+          <img class="intro-example-image" src="../assets/images/Page2/ElectricalSymbols.png" alt="Common electrical symbols used in circuit schematics">
+          <p>Electrical symbols represent the components used when drawing a schematic. Above are the symbols we'll use in this workshop. Electrical engineers also use symbols to represent common circuit connections, such as power supply and ground connections. You'll see more of them when we start building the schematic.</p>
         </div>
       </details>
 
@@ -108,7 +127,7 @@
             <div class="step-index">01</div>
             <div>
               <h2>Battery Circuit</h2>
-              <div class="media-placeholder">Add battery circuit image here</div>
+              <img class="circuit-section-image" src="../assets/images/Page2/CoinBattCircuit.png" alt="Battery and SPDT switch section of the circuit">
               <p>The coin cell supplies power to the circuit. The 3.3 V marking represents the voltage of a typical coin cell battery, and the main switch is a single-pole double-throw (SPDT) switch that selects between two paths.</p>
               <p>Labels such as VCC and GND make it easier to show shared connections. In this simulation, VCC is a label for the positive supply rail; the coin cell provides the voltage. GND is connected to the negative side of the battery and acts as the circuit's 0 V reference.</p>
               <div class="callout tip">
@@ -124,13 +143,13 @@
             <div class="step-index">02</div>
             <div>
               <h2>555 Timer Circuit</h2>
-              <div class="media-placeholder">Add 555 timer circuit image here</div>
+              <img class="circuit-section-image" src="../assets/images/Page2/555%20Timer%20Circuit.png" alt="555 timer oscillator section of the circuit">
               <p>The 555 timer is configured as a square-wave oscillator. Its resistor and capacitor network controls the timing, while the potentiometer lets you adjust the output frequency. The output signal then drives the LED section of the circuit.</p>
               <div class="callout tip">
                 <strong>Further resources</strong>
                 <ul class="resource-list">
-                  <li class="resource-placeholder">Add a resource title and link here</li>
-                  <li class="resource-placeholder">Add another resource title and link here</li>
+                  <li><a href="https://www.build-electronic-circuits.com/how-does-a-555-timer-work/" target="_blank" rel="noopener noreferrer">How a 555 timer works</a></li>
+                  <li><a href="https://www.ti.com/lit/ds/symlink/ne555.pdf" target="_blank" rel="noopener noreferrer">NE555 datasheet (Texas Instruments)</a></li>
                 </ul>
               </div>
             </div>
@@ -140,7 +159,7 @@
             <div class="step-index">03</div>
             <div>
               <h2>LED Array</h2>
-              <div class="media-placeholder">Add LED array circuit image here</div>
+              <img class="circuit-section-image" src="../assets/images/Page2/LEDArray.png" alt="LED array with a current-limiting resistor for each LED">
               <p>The circuit above is an array of LEDs, each with its own 1 kΩ resistor, powered by the output of the 555 timer. The resistors limit the current through the LEDs. For a typical red LED with a forward voltage of about 2 V, the current through each LED is approximately:</p>
               <div class="display-equation" role="math" aria-label="LED current equals 3.3 volts minus 2 volts, divided by 1 kiloohm, which is approximately 1.3 milliamps">
                 <span class="equation-variable">I</span><sub>LED</sub>
