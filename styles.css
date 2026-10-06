@@ -687,6 +687,25 @@ kbd {
   margin: 18px 0 22px;
 }
 
+.pcb-examples-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 18px 0 22px;
+}
+
+.pcb-examples-figure img {
+  display: block;
+  width: 100%;
+  max-width: 1050px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 50%;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 18px;
+}
+
 .intro-example-image {
   display: block;
   width: 100%;
@@ -698,12 +717,40 @@ kbd {
   background: var(--panel);
 }
 
+.old-radio-figure {
+  margin: 18px 0 22px;
+}
+
+.old-radio-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.old-radio-figure figcaption,
+.pcb-examples-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.opensauce-video {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  margin: 18px 0 22px;
+  border-radius: 18px;
+  object-fit: contain;
+}
+
 .circuit-section-image {
   display: block;
   width: 100%;
   max-height: 400px;
   object-fit: contain;
-  border-radius: 14px;
+  border-radius: 24px;
+  clip-path: inset(0 round 24px);
   margin: 16px 0;
 }
 
